@@ -10,6 +10,16 @@
       <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+
+      <script id="rss-template" type="text/x-handlebars-template">
+          <article class="article">
+          <section class="featured_image"><img src="{{image}}" alt=""/></section>
+          <section class="articleContent"><a href="{{link}}"><h3>{{title}}</h3></a>{{subreddit}} <h6>{{author}}</h6></section>
+          <section class="impressions">{{ups}}</section>
+          <div class="clearfix"></div>
+          </article>
+      </script>
 
     </head>
 
