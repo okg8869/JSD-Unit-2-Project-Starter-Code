@@ -18,6 +18,7 @@ $(document).ready(function(){
 	request.done(function(results){
 		$('#popUp').addClass('hidden');
 		var rssResults = results.data.children;
+		var posts = [];
 		for(i=0;i<rssResults.length;i++){
 			var postInfo = {
 				ups:rssResults[i].data.ups,
@@ -26,14 +27,21 @@ $(document).ready(function(){
 				title:rssResults[i].data.title,
 				link:rssResults[i].data.url
 			}
+			posts.push(postInfo);
+		};
 			var rssOnPage = rssApp.updateFeed(postInfo);
 			$('#main').prepend(rssOnPage);
 
 			$('#main').children(".article").on("click", function (){
-				$('#popUp').removeClass('loader');
-				$('#popUp').removeClass('hidden');
-			})
-		};
+				$('#popUp').removeClass('loader hidden');
+				$('#popUp h1').text(postInfo.title);
+				$('#popUp p').text(postInfo.author);
+				$('a.popUpAction').attr('href',postInfo.link);
+			});
+
+			$('.closePopUp').on('click', function(){
+				$('#popUp').addClass('hidden');
+			});
 	});
 
 });

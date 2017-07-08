@@ -13,12 +13,12 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
 
       <script id="rss-template" type="text/x-handlebars-template">
-          <article class="article">
-          <section class="featured_image"><img src="{{image}}" alt=""/></section>
-          <section class="articleContent"><a href="{{link}}"><h3>{{title}}</h3></a>{{subreddit}} <h6>{{author}}</h6></section>
-          <section class="impressions">{{ups}}</section>
-          <div class="clearfix"></div>
-          </article>
+        <article class="article">
+        <section class="featured_image"><img src="{{image}}" alt=""/></section>
+        <section class="articleContent"><a href="{{link}}"><h3>{{title}}</h3></a>{{subreddit}} <h6>{{author}}</h6></section>
+        <section class="impressions">{{ups}}</section>
+        <div class="clearfix"></div>
+        </article>
       </script>
 
     </head>
@@ -49,6 +49,7 @@
             <div class="clearfix"></div>
           </section>
         </header>
+
         <div id="popUp" class="loader hidden">
           <a href="#" class="closePopUp">X</a>
           <div class="container">
@@ -59,6 +60,7 @@
             <a href="#" class="popUpAction" target="_blank">Read more from source</a>
           </div>
         </div>
+        
         <section id="main" class="container">
           <article class="article">
             <section class="featuredImage">
