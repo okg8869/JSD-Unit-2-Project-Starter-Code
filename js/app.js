@@ -160,4 +160,18 @@ $(document).ready(function(){
 		runDigg();
 		$('#news-source').text("ALL");
 	});
+
+	$('#search a').on('click', function(){
+		$(this).toggle(function(){
+			$(this).prev().animate({
+				width: 185, 
+				visibility: "visible"
+			},200);
+		}, function(){
+			$(this).prev().animate({
+				width: 185,
+				visibility: "visible" 
+			},200);
+		});
+	});
 });
