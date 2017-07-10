@@ -14,7 +14,7 @@
 
       <script id="rss-template" type="text/x-handlebars-template">
         <article class="article">
-        <section class="featured_image"><img src="{{image}}" alt=""/></section>
+        <section class="featured_image"><img src="{{image}}" alt="" style="max-height: 100px; max-width: 100px/></section>
         <section class="articleContent"><a href="{{link}}"><h3>{{title}}</h3></a>{{subreddit}} <h6>{{author}}</h6></section>
         <section class="impressions">{{ups}}</section>
         <div class="clearfix"></div>
@@ -30,14 +30,14 @@
 
         <header>
           <section class="container">
-            <a href="#"><h1>Feedr</h1></a>
+            <a class='feedr' href="#"><h1>Feedr</h1></a>
             <nav>
               <ul>
-                <li><a href="#">News Source: <span>Source Name</span></a>
+                <li><a id='news-source' href="#">Select a news source!</a>
                   <ul>
-                      <li><a href="#">Source 1</a></li>
-                      <li><a href="#">Source 2</a></li>
-                      <li><a href="#">Source 3</a></li>
+                      <li id='reddit'><a href="#">Reddit</a></li>
+                      <li id='mashable'><a href="#">Mashable</a></li>
+                      <li id='digg'><a href="#">Digg</a></li>
                   </ul>
                 </li>
               </ul>
@@ -50,7 +50,7 @@
           </section>
         </header>
 
-        <div id="popUp" class="loader hidden">
+        <div id="popUp" class="loader hidden fancy">
           <a href="#" class="closePopUp">X</a>
           <div class="container">
             <h1>Article title here</h1>
@@ -62,58 +62,6 @@
         </div>
         
         <section id="main" class="container">
-          <article class="article">
-            <section class="featuredImage">
-              <img src="images/article_placeholder_1.jpg" alt="" />
-            </section>
-            <section class="articleContent">
-                <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
-            </section>
-            <section class="impressions">
-              526
-            </section>
-            <div class="clearfix"></div>
-          </article>
-          <article class="article">
-            <section class="featuredImage">
-              <img src="images/article_placeholder_2.jpg" alt="" />
-            </section>
-            <section class="articleContent">
-                <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
-            </section>
-            <section class="impressions">
-              526
-            </section>
-            <div class="clearfix"></div>
-          </article>
-          <article class="article">
-            <section class="featuredImage">
-              <img src="images/article_placeholder_2.jpg" alt="" />
-            </section>
-            <section class="articleContent">
-                <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
-            </section>
-            <section class="impressions">
-              526
-            </section>
-            <div class="clearfix"></div>
-          </article>
-          <article class="article">
-            <section class="featuredImage">
-              <img src="images/article_placeholder_1.jpg" alt="" />
-            </section>
-            <section class="articleContent">
-                <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
-            </section>
-            <section class="impressions">
-              526
-            </section>
-            <div class="clearfix"></div>
-          </article>
         </section>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
